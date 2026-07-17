@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New York, 7 jours — Carnet de voyage</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">✈ Carnet de voyage</p>
+    <h1>New York <span>en 7 jours</span></h1>
+    <p class="subtitle">27 juillet → 3 août 2026 · Logement : <b>33 W 55th Street, New York, NY 10019</b></p>
+  </div>
+  <div class="postmark">NYC<br>2026<br>✦ ✦ ✦</div>
+  <svg class="flight-path" viewBox="0 0 1000 70" preserveAspectRatio="none">
+    <path d="M0,40 Q250,10 500,40 T1000,40" fill="none" stroke="#B23A2E" stroke-width="2" stroke-dasharray="6 8"/>
+  </svg>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-tab="jour" type="button">🗓️ Itinéraire par jour</button>
+  <button class="tab" data-tab="map" type="button">🗺️ Carte complète</button>
+  <button class="tab" data-tab="recap" type="button">📋 Récap activités</button>
+</nav>
+
+<main>
+  <section id="tab-jour" class="tab-panel active">
+    <div class="day-selector" id="daySelector"></div>
+    <div class="day-heading" id="dayHeading"></div>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <section id="tab-map" class="tab-panel">
+    <div class="map-legend" id="mapLegend"></div>
+    <div id="map"></div>
+  </section>
+
+  <section id="tab-recap" class="tab-panel">
+    <div class="recap-grid" id="recapGrid"></div>
+  </section>
+</main>
+
+<footer>— Bon voyage à New York ✈ 🗽 —</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
