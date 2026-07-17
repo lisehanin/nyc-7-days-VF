@@ -90,12 +90,12 @@ function photoBlockHTML(item, rot){
   if(item.photos && item.photos.length){
     var imgs = '';
     for(var i=0; i<item.photos.length; i++){
-      imgs += '<img src="images/' + item.photos[i] + '" alt="' + item.activite + '" loading="lazy">';
+      imgs += '<img src="' + item.photos[i] + '" alt="' + item.activite + '" loading="lazy">';
     }
     return '<div class="card-photo gallery" style="--rot:' + rot + 'deg">' + imgs + '</div>';
   }
   if(item.photo){
-    return '<div class="card-photo" style="--rot:' + rot + 'deg"><img src="images/' + item.photo + '" alt="' + item.activite + '" loading="lazy"></div>';
+    return '<div class="card-photo" style="--rot:' + rot + 'deg"><img src="' + item.photo + '" alt="' + item.activite + '" loading="lazy"></div>';
   }
   return '<div class="card-photo placeholder" style="--rot:' + rot + 'deg">🗽</div>';
 }
@@ -193,7 +193,7 @@ function initMapIfNeeded(){
       radius: 8, color: '#fff', weight: 2, fillColor: color, fillOpacity: 0.95
     });
     var thumb = item.photo || (item.photos && item.photos[0]);
-    var photoHTML = thumb ? '<img src="images/' + thumb + '" alt="">' : '';
+    var photoHTML = thumb ? '<img src="' + thumb + '" alt="">' : '';
     marker.bindPopup(
       '<div class="map-popup">' + photoHTML +
       '<div class="mp-time">' + item.jour + ' · ' + (item.horaire || '') + '</div>' +
